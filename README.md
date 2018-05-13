@@ -4,6 +4,6 @@
 * *Lab 3* : The realisation of the **music store**
 * *Lab 4* : **String processor**
 * *Lab 5* : **Plugins** for Lab 3
-* *Lab 10*: The description of the **pen**
-*Lab 11*: The **music store** 
-*Lab 12*: **Logs processor**
+* *Lab 10* : The description of the **pen**
+* *Lab 11* : The **music store** 
+* *Lab 12* : **Logs processor**
