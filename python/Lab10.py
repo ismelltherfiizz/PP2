@@ -17,12 +17,12 @@ class Pen:
 	def print_static_sum():
 			print('Total value: {0} $'.format(Pen.total_value))
 		
-if __name__ == '__main__':
-	pen0 = Pen()
-	pen1 = Pen('Fountain', 'Supreme', 'Black', 'Gama', 50)
-	pen2 = Pen('Ballpoint', 'K15', 'Blue', 'Schneider ', 3)
-	pen3 = Pen('Gel', 'B19', 'Red', 'Okoko ', 1)
-	pen4 = Pen('Technical ', 'Rapidograph 2', 'Green', 'Staedtler', 10)
+
+pen0 = Pen()
+pen1 = Pen('Fountain', 'Supreme', 'Black', 'Gama', 50)
+pen2 = Pen('Ballpoint', 'K15', 'Blue', 'Schneider', 3)
+pen3 = Pen('Gel', 'B19', 'Red', 'Okoko', 1)
+pen4 = Pen('Technical ', 'Rapidograph 2', 'Green', 'Staedtler', 10)
 
 pen0.to_string
 print("\n")
@@ -37,6 +37,7 @@ print("\n\n")
 pen1.print_sum()
 pen2.print_sum()
 pen3.print_sum()
+pen4.print_sum()
 Pen.print_static_sum()
 
 
