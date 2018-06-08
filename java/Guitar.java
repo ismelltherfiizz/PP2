@@ -1,120 +1,120 @@
 public class Guitar {
-    private String Type;
-    private String Manufacturer;
-    private String Model;
-    private String PickupsType = "Has no pickups";
-    private double Price;
-    private static double PriceSum = 0;
+    private String type;
+    private String manufacturer;
+    private String model;
+    private String pickupsType = "Has no pickups";
+    private double price;
+    private static double priceSum = 0;
 
     public Guitar() {
-        Type = "Electric";
-        Manufacturer = "Fender";
-        Model = "American Original '60s Jaguar";
-        PickupsType = "Single-coils";
-        Price = 2099.99;
-        PriceSum += Price;
+        type = "Electric";
+        manufacturer = "Fender";
+        model = "American Original '60s Jaguar";
+        pickupsType = "Single-coils";
+        price = 2099.99;
+        priceSum += price;
     }
 
-    public Guitar(String Type, String Manufacturer, String Model, double Price) {
-        this.Type = Type;
-        this.Manufacturer = Manufacturer;
-        this.Model = Model;
-        this.Price = Price;
-        PriceSum += Price;
+    public Guitar(String type, String manufacturer, String model, double price) {
+        this.type = type;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.price = price;
+        priceSum += price;
 
     }
 
-    public Guitar(String Type, String Manufacturer, String Model, double Price, String PickupsType) {
-        this.Type = Type;
-        this.Manufacturer = Manufacturer;
-        this.Model = Model;
-        this.PickupsType = PickupsType;
-        this.Price = Price;
-        PriceSum += Price;
+    public Guitar(String type, String manufacturer, String model, double price, String pickupsType) {
+        this.type = type;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.pickupsType = pickupsType;
+        this.price = price;
+        priceSum += price;
     }
 
     public void printSum() {
-        System.out.println("Total value of all guitars: " + PriceSum + "$");
+        System.out.println("Total value of all guitars: " + priceSum + "$");
     }
 
     public static void printStaticSum() {
-        System.out.println("Total value of all guitars: " + PriceSum + "$");
+        System.out.println("Total value of all guitars: " + priceSum + "$");
     }
 
     public void printToString() {
-        System.out.println("Type: " + Type + ";");
-        System.out.println("Manufacturer: " + Manufacturer + ";");
-        System.out.println("Model: " + Model + ";");
-        System.out.println("Type of pickups: " + PickupsType + ";");
-        System.out.println("Price: " + Price + "$");
+        System.out.println("Type: " + type + ";");
+        System.out.println("Manufacturer: " + manufacturer + ";");
+        System.out.println("Model: " + model + ";");
+        System.out.println("Type of pickups: " + pickupsType + ";");
+        System.out.println("Price: " + price + "$");
         System.out.println();
     }
 
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getType() {
-        return Type;
+        return type;
     }
 
-    public void setManufacturer(String Manufacturer) {
-        this.Manufacturer = Manufacturer;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     public String getManufacturer() {
-        return Manufacturer;
+        return manufacturer;
     }
 
-    public void setModel(String Model) {
-        this.Model = Model;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public String getModel() {
-        return Model;
+        return model;
     }
 
-    public void setPickupsType(String PickupsType) {
-        this.PickupsType = PickupsType;
+    public void setPickupsType(String pickupsType) {
+        this.pickupsType = pickupsType;
     }
 
     public String getPickupsType() {
-        return PickupsType;
+        return pickupsType;
     }
 
-    public void setPrice(double Price) {
-        PriceSum -= Price;
-        this.Price = Price;
-        PriceSum += Price;
+    public void setPrice(double price) {
+        priceSum -= price;
+        this.price = price;
+        priceSum += price;
 
     }
 
     public double getPrice() {
-        return Price;
+        return price;
     }
 
-    public void resetValues(String Type, String Manufacturer, String Model, double Price, String PickupsType) {
-        PriceSum -= Price;
-        this.Type = Type;
-        this.Manufacturer = Manufacturer;
-        this.Model = Model;
-        this.PickupsType = PickupsType;
-        this.Price = Price;
-        PriceSum += Price;
+    public void resetValues(String type, String manufacturer, String model, double price, String pickupsType) {
+        priceSum -= price;
+        this.type = type;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.pickupsType = pickupsType;
+        this.price = price;
+        priceSum += price;
     }
 
     public static void main(String[] args) {
-        Guitar Jaguar = new Guitar();
-        Guitar J45 = new Guitar("Acoustic", "Epiphone", "Ltd. Ed. 1963 J-45", 370);
-        Guitar LesPaul = new Guitar("Electric", "Gibson", "Les Paul Custom Axcess Stopbar", 5199.99, "Humbuckers");
+        Guitar jaguar = new Guitar();
+        Guitar j45 = new Guitar("Acoustic", "Epiphone", "Ltd. Ed. 1963 J-45", 370);
+        Guitar lesPaul = new Guitar("Electric", "Gibson", "Les Paul Custom Axcess Stopbar", 5199.99, "Humbuckers");
 
         Guitar.printStaticSum();
 
-        J45.printToString();
-        Jaguar.printToString();
-        LesPaul.printToString();
+        j45.printToString();
+        jaguar.printToString();
+        lesPaul.printToString();
 
-        Jaguar.printSum();
+        jaguar.printSum();
 
     }
 }
